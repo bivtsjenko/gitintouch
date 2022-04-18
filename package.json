@@ -47,6 +47,7 @@
     "react-https-redirect": "^1.1.0",
     "slug": "^5.2.0",
     "stripe": "^8.205.0",
+    "styled-components": "^5.3.5",
     "urql": "^2.2.0"
   },
   "devDependencies": {
@@ -68,6 +69,7 @@
     "@types/passport": "^1.0.7",
     "@types/react": "^17.0.39",
     "@types/slug": "^5.0.3",
+    "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
     "common-tags": "1.8.2",
