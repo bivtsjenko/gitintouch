@@ -1,16 +1,28 @@
 import Link from "next/link";
 import { useGetCurrentUserQuery } from "../../graphql/getCurrentUser.generated";
+import styled from "styled-components";
 
-function Navbar() {
+const StyledNavbar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 1rem;
+  
+  a {
+    color: white;
+  }
+`;
+
+const Navbar = () => {
   const [{ data }] = useGetCurrentUserQuery();
   const isAuthenticated = !!data?.currentUser;
 
   return (
-    <div style={{ display: `flex`, justifyContent: `space-between` }}>
-      <Link href={isAuthenticated ? `/app` : `/`}>SaaS</Link>
+    <StyledNavbar>
+      <Link href={isAuthenticated ? `/app` : `/`}>GitInTouch</Link>
       {isAuthenticated && <Link href="/api/auth/logout">Logout</Link>}
-    </div>
+    </StyledNavbar>
   );
-}
+};
 
 export default Navbar;
