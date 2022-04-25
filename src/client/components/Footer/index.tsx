@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-  background: black;
+  background: hsl(210, 50%, 4%);
   color: white;
   padding: 1rem;
   position: absolute;

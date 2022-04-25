@@ -1,24 +1,26 @@
-import Link from "next/link";
 import { useGetCurrentUserQuery } from "../client/graphql/getCurrentUser.generated";
+import { StyledBox, StyledParagraph, StyledH1, Container } from "./index.style";
+
+export type FlexDirectionType = "column" | "row";
 
 const Homepage = () => {
   const [{ data }] = useGetCurrentUserQuery();
-  const isAuthenticated = !!data?.currentUser;
+  // const isAuthenticated = !!data?.currentUser;
 
   return (
-    <>
-      <h1>My SaaS Name</h1>
-      <h2>This could be your tagline</h2>
+    <Container>
+      <StyledBox direction="column">
+        <StyledH1>Welkom op GitInTouch!</StyledH1>
+        <StyledParagraph>
+          De plek waar recruiters en ontwikkelaars met elkaar verbinden.
+        </StyledParagraph>
+      </StyledBox>
 
-      {!isAuthenticated ? (
-        <>
-          <Link href="/get-started">Get started</Link>
-          <Link href="/login">Login</Link>
-        </>
-      ) : (
-        <Link href="/app">Go to dashboard</Link>
-      )}
-    </>
+      <StyledBox direction="row">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio omnis
+        vel!
+      </StyledBox>
+    </Container>
   );
 };
 

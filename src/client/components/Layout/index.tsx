@@ -10,17 +10,13 @@ type LayoutProps = {
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    background: hsl(186, 0%, 5%);
+    background: hsl(210, 25%, 8%);
     color: white;
-    
-    a {
-      color: white;
-    }
   }
 `;
 
 const Container = styled.div`
-  padding: 1rem;
+  display: block;
 `;
 
 const Layout = ({ children }: LayoutProps) => {

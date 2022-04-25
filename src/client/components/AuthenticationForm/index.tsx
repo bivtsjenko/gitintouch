@@ -1,5 +1,57 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FormEvent, useState } from "react";
+import styled from "styled-components";
+import { useGetCurrentUserQuery } from "../../graphql/getCurrentUser.generated";
+
+const StyledFormInput = styled.input`
+  background: transparent;
+  border: solid 2px #525252;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  outline: 0;
+  color: white;
+  transition: border 0.2s ease;
+  margin-bottom: 5px;
+
+  &:active,
+  &:focus {
+    border: solid 2px #9f9f9f;
+  }
+`;
+
+const StyledButton = styled.button`
+  background: hsl(27, 81%, 44%);
+  border: 0;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-family: "OpenSans", serif;
+
+  &:hover {
+    background: hsl(27, 82%, 51%);
+  }
+
+  &:active {
+    background: none;
+    padding: 0.4rem;
+    border: solid 2px rgba(255, 255, 255, 0.1);
+  }
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 1rem auto;
+`;
 
 /**
  * Used on the Login and Sign Up screens to handle authentication.
@@ -11,6 +63,8 @@ const AuthenticationForm = () => {
   const router = useRouter();
   const { r } = router.query;
   const redirect = r?.toString();
+  const [{ data }] = useGetCurrentUserQuery();
+  const isAuthenticated = !!data?.currentUser;
 
   const handleOnSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
@@ -40,15 +94,17 @@ const AuthenticationForm = () => {
     setEmail(evt.target.value);
 
   return (
-    <form onSubmit={handleOnSubmit}>
-      <input
+    <StyledForm onSubmit={handleOnSubmit}>
+      <StyledFormInput
         type="email"
         placeholder="me@hello.com"
         value={email}
         onChange={handleOnChange}
       />
-      <button type="submit">Let's go!</button>
-    </form>
+      <StyledButton type="submit">
+        {isAuthenticated ? "Login" : "Registreren"}
+      </StyledButton>
+    </StyledForm>
   );
 };
 
