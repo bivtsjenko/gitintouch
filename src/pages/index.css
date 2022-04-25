@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../assets/fonts/BebasNeue-Regular.woff2") format("woff2"),
-    url("../assets/fonts/BebasNeue-Regular.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("../assets/fonts/OpenSans-ExtraBold.woff") format("woff2"),
+    url("../assets/fonts/OpenSans-ExtraBold.woff2") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'Bebas Neue', serif;
+  font-family: 'OpenSans', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
