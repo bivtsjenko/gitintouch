@@ -7,7 +7,7 @@ const StyledFormInput = styled.input`
   background: transparent;
   border: solid 2px #525252;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100%;
   outline: 0;
   color: white;
@@ -22,8 +22,7 @@ const StyledFormInput = styled.input`
 
 const StyledButton = styled.button`
   background: hsl(27, 81%, 44%);
-  border: 0;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
   text-decoration: none;
   border-radius: 5px;
   transition: all 0.2s ease;
@@ -33,6 +32,7 @@ const StyledButton = styled.button`
   color: white;
   cursor: pointer;
   font-family: "OpenSans", serif;
+  border: solid 2px transparent;
 
   &:hover {
     background: hsl(27, 82%, 51%);
@@ -40,7 +40,6 @@ const StyledButton = styled.button`
 
   &:active {
     background: none;
-    padding: 0.4rem;
     border: solid 2px rgba(255, 255, 255, 0.1);
   }
 `;

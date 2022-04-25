@@ -19,6 +19,7 @@ const StyledLink = styled.a<{ variant: LinkVariantType; width?: number }>`
   width: ${({ width }) => (width ? `${width}px` : null)};
   display: inline-block;
   text-align: center;
+  border: solid 2px transparent;
 
   &:not(:last-of-type) {
     margin-right: 0.5rem;
@@ -31,7 +32,6 @@ const StyledLink = styled.a<{ variant: LinkVariantType; width?: number }>`
 
   &:active {
     background: none;
-    padding: 0.4rem;
     border: solid 2px rgba(255, 255, 255, 0.1);
   }
 `;

@@ -2,32 +2,34 @@ import styled from "styled-components";
 import image from "../assets/img/bg.jpg";
 import { FlexDirectionType } from "./index";
 import { device } from "../client/utils/breakpoints";
+import { fadeIn } from "../client/utils/animations";
 
-const StyledH1 = styled.h1`
+type ParagraphColorType = "blue";
+
+const StyledH1 = styled.h1<{ space?: boolean }>`
   font-size: 35px;
 
   ${device.tablet} {
     font-size: 45px;
-    margin: 0;
+    margin: ${({ space }) => (space ? "0 0 1rem 0" : 0)};
   }
 `;
 
-const StyledParagraph = styled.p`
-  color: #f67f2a;
+const StyledParagraph = styled.p<{ color?: ParagraphColorType }>`
+  color: ${({ color }) => (color === "blue" ? "hsl(219,100%,63%)" : "#f67f2a")};
   margin-top: 0;
 `;
 
 const StyledBox = styled.div<{
   direction: FlexDirectionType;
   backgroundImage?: boolean;
+  variant?: "secondary";
 }>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: ${({ direction }) =>
     direction === "column" ? "column" : "row"};
-  // border: solid 1px hsl(210, 25%, 18%);
-  // box-shadow: 0 5px 3px hsl(0, 100%, 0%);
   text-align: center;
   padding: 1rem;
   border-radius: 5px;
@@ -35,7 +37,8 @@ const StyledBox = styled.div<{
     backgroundImage
       ? `url(${image.src}) no-repeat bottom`
       : "hsl(209, 30%, 15%)"};
-  // box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.75);
+  box-shadow: ${({ backgroundImage }) =>
+    backgroundImage ? "inset 0 0 0 2000px rgba(19, 19, 19, 0.75)" : null};
   background-size: cover;
   min-height: 75px;
   margin-bottom: 1rem;
@@ -52,4 +55,15 @@ const Container = styled.div<{ width?: number }>`
   }
 `;
 
-export { StyledBox, StyledH1, StyledParagraph, Container };
+const StyledInnerContainer = styled.div`
+  animation-name: ${fadeIn};
+  animation-duration: 2s;
+`;
+
+export {
+  StyledBox,
+  StyledH1,
+  StyledParagraph,
+  Container,
+  StyledInnerContainer,
+};

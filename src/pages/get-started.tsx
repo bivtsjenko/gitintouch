@@ -2,6 +2,7 @@ import AuthenticationForm from "../client/components/AuthenticationForm";
 import { Container } from "./index.style";
 import styled from "styled-components";
 import { device } from "../client/utils/breakpoints";
+import { fadeIn } from "../client/utils/animations";
 
 const StyledForm = styled.div`
   padding: 1rem;
@@ -10,6 +11,10 @@ const StyledForm = styled.div`
   margin: 0 auto;
   display: block;
   text-align: center;
+  box-shadow: 0 15px 25px rgb(0, 0, 0, 0.2);
+
+  animation-name: ${fadeIn};
+  animation-duration: 1s;
 `;
 
 const StyledH1 = styled.h1`
