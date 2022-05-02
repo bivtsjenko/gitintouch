@@ -1,5 +1,5 @@
 import AuthenticationForm from "../client/components/AuthenticationForm";
-import { Container } from "./index.style";
+import { Container } from "../styles/index.style";
 import styled from "styled-components";
 import { device } from "../client/utils/breakpoints";
 import { fadeIn } from "../client/utils/animations";

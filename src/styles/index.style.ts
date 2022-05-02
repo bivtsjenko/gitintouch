@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import image from "../assets/img/bg.jpg";
-import { FlexDirectionType } from "./index";
+import { FlexDirectionType } from "../pages";
 import { device } from "../client/utils/breakpoints";
 import { fadeIn } from "../client/utils/animations";
 

@@ -5,7 +5,7 @@ import {
   StyledH1,
   Container,
   StyledInnerContainer,
-} from "./index.style";
+} from "../styles/index.style";
 import Search from "../client/components/Search/Search";
 
 export type FlexDirectionType = "column" | "row";

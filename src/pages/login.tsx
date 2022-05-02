@@ -1,7 +1,7 @@
 import AuthenticationForm from "../client/components/AuthenticationForm";
 import styled from "styled-components";
 import { device } from "../client/utils/breakpoints";
-import { Container } from "./index.style";
+import { Container } from "../styles/index.style";
 import { fadeIn } from "../client/utils/animations";
 
 const StyledForm = styled.div`

@@ -1,6 +1,6 @@
 import { useGetCurrentUserQuery } from "../../graphql/getCurrentUser.generated";
 import styled from "styled-components";
-import { Container } from "../../../pages/index.style";
+import { Container } from "../../../styles/index.style";
 import Link from "../Link/Link";
 
 const StyledNavbarOuter = styled.div`
