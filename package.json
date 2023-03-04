@@ -47,7 +47,7 @@
     "react-https-redirect": "^1.1.0",
     "slug": "^5.2.0",
     "stripe": "^8.205.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.7",
     "urql": "^2.2.0"
   },
   "devDependencies": {
