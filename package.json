@@ -38,7 +38,7 @@
     "next-connect": "^0.12.2",
     "nexus": "^1.2.0",
     "passport": "^0.5.2",
-    "passport-magic-login": "1.0.9",
+    "passport-magic-login": "1.2.2",
     "postmark": "^3.0.1",
     "raw-body": "^2.5.1",
     "react": "^17.0.2",
