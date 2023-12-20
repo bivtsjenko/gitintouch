@@ -28,7 +28,7 @@
   "dependencies": {
     "@prisma/client": "^3.9.2",
     "@urql/exchange-graphcache": "^4.3.6",
-    "apollo-server-micro": "^3.6.3",
+    "apollo-server-micro": "^3.13.0",
     "cookie-session": "^2.0.0",
     "dotenv": "^16.0.0",
     "graphql": "^15.8.0",
