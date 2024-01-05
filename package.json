@@ -39,7 +39,7 @@
     "nexus": "^1.2.0",
     "passport": "^0.5.2",
     "passport-magic-login": "1.0.9",
-    "postmark": "^3.0.1",
+    "postmark": "^4.0.0",
     "raw-body": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
